@@ -4,7 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class Gui {
+public class GuiWindowBuilder {
 
 	private JFrame frame;
 
@@ -15,7 +15,7 @@ public class Gui {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Gui window = new Gui();
+					GuiWindowBuilder window = new GuiWindowBuilder();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -27,7 +27,7 @@ public class Gui {
 	/**
 	 * Create the application.
 	 */
-	public Gui() {
+	public GuiWindowBuilder() {
 		initialize();
 	}
 
