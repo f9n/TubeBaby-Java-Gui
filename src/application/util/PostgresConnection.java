@@ -7,11 +7,30 @@ public class PostgresConnection {
 	private static final String JDBC_DRIVER = "org.postgresql.Driver";
 	//Connection
 	private static Connection con = null;
-	//Connection String
-	private static final String dburl = "jdbc:postgresql://127.0.0.1:5432/tubebaby";
-	private static final String user = "postgres";
-	private static final String password = "123456";
 	
+	private static String dburl = "jdbc:postgresql://127.0.0.1:5432/tubebaby2";
+	private static String user = "postgres";
+	private static String password = "123qwe-+";
+	public static Connection Connector() {
+		try{
+			Class.forName("org.postgresql.Driver");
+			Connection conn = DriverManager.getConnection(dburl, user, password);
+			return conn;
+		}catch(Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
+	public static Connection Connector(String user2, String pass2) {
+		try{
+			Class.forName("org.postgresql.Driver");
+			Connection conn = DriverManager.getConnection(dburl, user2, pass2);		
+			return conn;
+		}catch(Exception e) {
+			System.out.println(e);
+			return null;
+		}
+	}
 	//Connect to DB
     public static void dbConnect() throws SQLException, ClassNotFoundException {
         //Setting Postgres JDBC Driver
