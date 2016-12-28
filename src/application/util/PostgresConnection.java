@@ -10,7 +10,7 @@ public class PostgresConnection {
 	
 	private static String dburl = "jdbc:postgresql://127.0.0.1:5432/tubebaby2";
 	private static String user = "postgres";
-	private static String password = "123qwe-+";
+	private static String password = "123456";
 	public static Connection Connector() {
 		try{
 			Class.forName("org.postgresql.Driver");
